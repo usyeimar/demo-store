@@ -1,17 +1,15 @@
-import {IsHexColor, IsString} from "class-validator";
-import {PartialType} from "@nestjs/swagger";
+import { IsHexColor, IsString } from 'class-validator';
+import { PartialType } from '@nestjs/swagger';
 
 export class CreateCategoriesDto {
-    @IsString()
-    name: string;
+  @IsString()
+  name: string;
 
-    @IsString()
-    description: string;
+  @IsString()
+  description: string;
 
-    @IsHexColor()
-    color: string;
+  @IsHexColor()
+  color: string;
 }
 
-
-export class UpdateCategoriesDto extends PartialType(CreateCategoriesDto) {
-}
+export class UpdateCategoriesDto extends PartialType(CreateCategoriesDto) {}
